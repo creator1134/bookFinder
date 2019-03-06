@@ -22,19 +22,17 @@ function bookSearch() {
 
       resultToDisplay = [
         '<div class="container">',
-        '<div class="row">',
-        '<div class="col-lg-4">',
-        '<img src="' + res.imageLinks.thumbnail + '">',
-        '</div> ',
-        '<div class="col-lg-8">',
-        '<h2>' + res.title + '(' + res.publishedDate + ')' + '</h2>',
-        '<h4>' + res.authors + '</h4>',
-        '<a class="btn btn-primary" href="' + res.infoLink + '" target="_blank">Learn More</a>',
+        '<div class="card" style="width: 18rem;">',
+        '<img class="card-img-top" style="width:5rem;height:8rem" src="' + res.imageLinks.thumbnail + '" alt="Card image cap">',
+        '<div class="card-body">',
+        '<h5 class="card-title">' + res.title + '(' + res.publishedDate + ')' + '</h5>',
+        '<p class="card-text">' + res.authors + '</p>',
+        '<a href="' + res.infoLink + '" target="_blank" class="btn btn-primary">Learn More</a>',
         '</div>',
         '</div>',
-        ' </div>',
-        ' </div>'
+        '</div>'
       ];
+
       $('#results').append(resultToDisplay);
     }
   });
